@@ -6,32 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVertical1"
-        app:layout_constraintGuide_percent="0.3"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVertical2"
-        app:layout_constraintGuide_percent="0.7"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal1"
-        app:layout_constraintGuide_percent="0.1"
-        android:orientation="horizontal"
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/textViewA"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/textViewB"
+        android:textSize="30sp"
+        android:text="A"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
-        app:layout_constraintTop_toTopOf="@id/guidelineHorizontal1"
-        app:layout_constraintRight_toRightOf="@id/guidelineVertical2"
-        app:layout_constraintLeft_toLeftOf="@id/guidelineVertical1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/textViewC"
+        android:id="@+id/textViewB"
+        app:layout_constraintLeft_toRightOf="@id/textViewA"
         android:textSize="30sp"
-        android:text="View 1"
+        android:text="B"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/textViewC"
+        app:layout_constraintLeft_toRightOf="@id/textViewB"
+        android:textSize="30sp"
+        android:text="C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
